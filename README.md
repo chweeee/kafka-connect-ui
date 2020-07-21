@@ -20,7 +20,7 @@ This chart will do the following:
 You can install the chart with the release name `kcui` as below.
 
 
-```console{%raw}
+```
 $ kubectl get all -l app=kafka-connect-ui
 NAME                          DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 deploy/kcui-kafka-connect-ui   1         1         1            1           23m
