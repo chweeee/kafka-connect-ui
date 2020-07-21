@@ -24,7 +24,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-          - name: SCHEMAREGISTRY_URL
+          - name: KAFKACONNECT_URL
             value: "{{ .Values.kafkaConnect.url }}:{{ .Values.kafkaConnect.port }}"
           - name: PROXY
             value: "{{ .Values.kafkaConnect.proxy }}"

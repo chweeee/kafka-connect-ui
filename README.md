@@ -58,11 +58,11 @@ The following table lists the configurable parameters of the KafkaConnectUI char
 | `image.imagePullPolicy` | Image Pull Policy | `IfNotPresent` |
 | `kafkaConnect.url` | URL to the kafka connect endpoint | `http://localhost` |
 | `kafkaConnect.port` | Port for the kafka connect | `8083` |
-| `kafkaConnect.proxy` | Whether to proxy Schema Registry endpoint via the internal webserver | `false` |
+| `kafkaConnect.proxy` | Whether to proxy Kafka Connect endpoint via the internal webserver | `false` |
 | `kafkaConnect.allowGlobal` | Support for global compatibility level configuration support —i.e change the default compatibility level of your kafka connect | `false` |
-| `kafkaConnect.allowTransitive` | Support for transitive compatibility levels (Schema Registry version 3.1.1 or better) | `false` |
-| `kafkaConnect.allowDeletion` | Support for Schema deletion (Schema Registry version 3.3.0 or better) | `false` |
-| `kafkaConnect.readOnlyMode` | Support for readonly mode (overwrites settings for global compatibility configuration and schema deletion) | `false` |
+| `kafkaConnect.allowTransitive` | Support for transitive compatibility levels (Kafka Connect version 3.1.1 or better) | `false` |
+| `kafkaConnect.allowDeletion` | Support for Connector deletion (Kafka Connect version 3.3.0 or better) | `false` |
+| `kafkaConnect.readOnlyMode` | Support for readonly mode (overwrites settings for global compatibility configuration and Connector deletion) | `false` |
 | `service.type` | Type of the service | `LoadBalancer` |
 | `service.port` | Port to use | `80` |
 | `service.annotations` | Kubernetes service annotations | `{}` |
