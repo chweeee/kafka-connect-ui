@@ -3,7 +3,7 @@ entries:
   kafka-connect-ui:
   - apiVersion: v1
     appVersion: v0.1.0
-    created: "2020-07-21T13:52:46.244239+08:00"
+    created: "2020-07-21T13:57:14.976971+08:00"
     description: This is a web tool for the confluentinc/kafka-connect for setting
       up and managing connectors for multiple connect clusters.
     digest: 304493fe2a312de3502cab2d29f6713c55f8571d3c786698323bf9460204a19c
@@ -24,7 +24,7 @@ entries:
     version: 0.1.2
   - apiVersion: v1
     appVersion: v0.1.0
-    created: "2020-07-21T13:52:46.241074+08:00"
+    created: "2020-07-21T13:57:14.976169+08:00"
     description: This is a web tool for the confluentinc/kafka-connect for setting
       up and managing connectors for multiple connect clusters.
     digest: 9452d2ccda066a632c1a144dd24e702e03c95e7e2efe29dfe528a464c5402add
@@ -45,7 +45,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: v0.1.0
-    created: "2020-07-21T13:52:46.240078+08:00"
+    created: "2020-07-21T13:57:14.975325+08:00"
     description: This is a web tool for the confluentinc/kafka-connect for setting
       up and managing connectors for multiple connect clusters.
     digest: 9ed528fa538417445ef79d26969cb059b20fd235bd3869594092e9f8258d0d74
@@ -64,4 +64,4 @@ entries:
     urls:
     - https://chweeee.github.io/kafka-connect-ui/kafka-connect-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2020-07-21T13:52:46.238596+08:00"
+generated: "2020-07-21T13:57:14.973969+08:00"
