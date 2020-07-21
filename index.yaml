@@ -3,7 +3,28 @@ entries:
   kafka-connect-ui:
   - apiVersion: v1
     appVersion: v0.1.0
-    created: "2020-07-21T12:19:01.62392+08:00"
+    created: "2020-07-21T12:47:05.496706+08:00"
+    description: This is a web tool for the confluentinc/kafka-connect for setting
+      up and managing connectors for multiple connect clusters.
+    digest: 27a22475edd4513ecfb471760807caf659e886737a0dbc0a15b4890d9cfc226e
+    home: https://github.com/lensesio/kafka-connect-ui
+    icon: https://avatars2.githubusercontent.com/u/9439498?s=200&v=4
+    keywords:
+    - confluent
+    - kafka-connect-ui
+    - Kafka
+    - avro
+    - kafka-connect
+    maintainers:
+    - email: tancwww@gmail.com
+      name: cheewee
+    name: kafka-connect-ui
+    urls:
+    - https://chweeee.github.io/kafka-connect-ui/kafka-connect-ui-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: v0.1.0
+    created: "2020-07-21T12:47:05.496227+08:00"
     description: This is a web tool for the confluentinc/kafka-connect for setting
       up and managing connectors for multiple connect clusters.
     digest: 9ed528fa538417445ef79d26969cb059b20fd235bd3869594092e9f8258d0d74
@@ -22,4 +43,4 @@ entries:
     urls:
     - https://chweeee.github.io/kafka-connect-ui/kafka-connect-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2020-07-21T12:19:01.61966+08:00"
+generated: "2020-07-21T12:47:05.492849+08:00"
