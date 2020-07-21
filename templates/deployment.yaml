@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "kafka-connect-ui.fullname" . }}
+  labels:
+    app: {{ template "kafka-connect-ui.name" . }}
+    chart: {{ template "kafka-connect-ui.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "kafka-connect-ui.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "kafka-connect-ui.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: SCHEMAREGISTRY_URL
+            value: "{{ .Values.kafkaConnect.url }}:{{ .Values.kafkaConnect.port }}"
+          - name: PROXY
+            value: "{{ .Values.kafkaConnect.proxy }}"
+          - name: ALLOW_GLOBAL
+            value: "{{ .Values.kafkaConnect.allowGlobal }}"
+          - name: ALLOW_TRANSITIVE
+            value: "{{ .Values.kafkaConnect.allowTransitive }}"
+          - name: ALLOW_DELETION
+            value: "{{ .Values.kafkaConnect.allowDeletion }}"
+          - name: READONLY_MODE
+            value: "{{ .Values.kafkaConnect.readOnlyMode }}"
+          ports:
+            - name: http
+              containerPort: 8000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
